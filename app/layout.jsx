@@ -1,6 +1,6 @@
 import { Archivo, Figtree } from "next/font/google";
 import "./globals.css";
-import StructuredData from "../components/StructuredData";
+
 
 export const archivo = Archivo({
   subsets: ["latin"],
@@ -142,7 +142,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <StructuredData />
+
         <meta name="google-site-verification" content="your-google-verification-code" />
         <meta name="msvalidate.01" content="your-bing-verification-code" />
       </head>
