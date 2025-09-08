@@ -1,5 +1,6 @@
 import { Archivo, Figtree } from "next/font/google";
 import "./globals.css";
+import JsonLd from "../components/JsonLd";
 
 
 export const archivo = Archivo({
@@ -138,11 +139,19 @@ export const metadata = {
   },
 };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "VX Software Solutions",
+    "url": "https://vxsoftwaresolutions.com",
+    "logo": "https://vxsoftwaresolutions.com/images/logo.png",
+  }
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-
+        <JsonLd data={jsonLd} />
         <meta name="google-site-verification" content="your-google-verification-code" />
         <meta name="msvalidate.01" content="your-bing-verification-code" />
       </head>
