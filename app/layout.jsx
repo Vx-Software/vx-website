@@ -81,7 +81,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: '7d9afdb70696a250',
   },
 };
 
@@ -134,7 +134,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <JsonLd data={jsonLd} />
-        <meta name="google-site-verification" content="your-google-verification-code" />
+        <meta name="google-site-verification" content="7d9afdb70696a250" />
       </head>
       <body className={`${archivo.variable} ${figtree.variable} antialiased`}>
         {children}
