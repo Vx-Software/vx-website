@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://www.vxsoftwaresolutions.com",
+  siteUrl: "https://www.vxsoftwaresolutions.com",
   generateRobotsTxt: true,
   sitemapSize: 7000,
   changefreq: 'daily',
