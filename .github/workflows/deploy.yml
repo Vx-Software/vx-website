@@ -28,6 +28,24 @@ jobs:
       - name: Add CNAME file
         run: echo "www.vxsoftwaresolutions.com" > ./out/CNAME
 
+      - name: Create proper robots.txt
+        run: |
+          cat > ./out/robots.txt << 'EOF'
+          User-agent: *
+          Allow: /
+          Disallow: /admin/
+          Disallow: /api/
+          Disallow: /_next/
+
+          Host: https://www.vxsoftwaresolutions.com
+
+          Sitemap: https://www.vxsoftwaresolutions.com/sitemap.xml
+          Sitemap: https://www.vxsoftwaresolutions.com/sitemap-0.xml
+          EOF
+
+      - name: Remove unnecessary .txt files
+        run: find ./out -name "*.txt" ! -name "robots.txt" -type f -delete
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
