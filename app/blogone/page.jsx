@@ -10,6 +10,28 @@ const figtree = Figtree({
   weight: ["400", "600", "700"], // Customize as needed
 });
 
+export const metadata = {
+  title: "Vadim Peskov Podcast Interview with Illuminz Insights | VX Blog",
+  description:
+    "Highlights and insights from the Vadim Peskov podcast interview. Explore lessons for startups, product, and engineering.",
+  alternates: { canonical: "/blogone" },
+  openGraph: {
+    title: "Vadim Peskov Podcast Interview — Insights",
+    description:
+      "Key takeaways for founders, product teams, and engineers.",
+    url: "https://www.vxsoftwaresolutions.com/blogone",
+    images: [
+      { url: "/images/bannerimg.jpg", width: 1200, height: 630, alt: "VX Blog" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vadim Peskov Podcast Interview — Insights",
+    description:
+      "Key takeaways for founders, product teams, and engineers.",
+    images: ["/images/bannerimg.jpg"],
+  },
+};
 
 export default function VadimPeskovPodcast() {
   return (

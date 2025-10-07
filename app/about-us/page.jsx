@@ -1,5 +1,3 @@
-"use client";
-
 import Contact from "../../components/Contact";
 import Footer from "../../components/footer1";
 import Navbar from "../../components/Navbar";
