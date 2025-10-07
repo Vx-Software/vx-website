@@ -15,7 +15,7 @@ export const figtree = Figtree({
 
 export const metadata = {
   title: {
-    default: "VX Software Solutions - Premier Software Development Company",
+    default: "VX Software Solutions",
     template: "%s | VX Software Solutions"
   },
   description: "VX Software Solutions is a leading software development company specializing in AI solutions, healthcare software (V Healthcare), school management systems (V Remind), mobile development, and digital transformation services.",
@@ -51,7 +51,7 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.vxsoftwaresolutions.com',
-    title: 'VX Software Solutions - Premier Software Development Company',
+    title: 'VX Software Solutions',
     description: 'Leading software development company specializing in AI solutions, healthcare software (V Healthcare), school management systems (V Remind), and digital transformation.',
     siteName: 'VX Software Solutions',
     images: [
@@ -59,13 +59,13 @@ export const metadata = {
         url: '/images/bannerimg.jpg',
         width: 1200,
         height: 630,
-        alt: 'VX Software Solutions - Premier Software Development Company',
+        alt: 'VX Software Solutions',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'VX Software Solutions - Premier Software Development Company',
+    title: 'VX Software Solutions',
     description: 'Leading software development company specializing in AI solutions, healthcare software, school management systems, and digital transformation.',
     images: ['/images/bannerimg.jpg'],
   },

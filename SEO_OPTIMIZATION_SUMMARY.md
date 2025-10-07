@@ -11,7 +11,7 @@ Your website was not ranking for "VX Software Solutions" due to:
 
 ### 1. **Metadata Cleanup & Focus**
 - **Reduced keywords from 80+ to 14 focused terms**
-- **Streamlined title**: "VX Software Solutions - Premier Software Development Company"
+- **Streamlined title**: "VX Software Solutions"
 - **Optimized description** focusing on core services
 - **Removed irrelevant terms** like multiple city variations and personal names
 

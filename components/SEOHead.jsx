@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 const SEOHead = ({ 
-  title = "VX Software Solutions - Premier Software Development Company",
+  title = "VX Software Solutions",
   description = "Leading software development company specializing in AI solutions, healthcare software, school management systems, and digital transformation.",
   keywords = "VX Software Solutions, software development company, AI development, healthcare software, school management system",
   canonical = "https://vxsoftwaresolutions.com",
