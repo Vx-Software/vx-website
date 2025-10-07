@@ -4,6 +4,29 @@ import Testimonials from "../../components/Testimonials";
 import Contact from "../../components/Contact";
 import Footer from "../../components/footer1";
 
+export const metadata = {
+  title: "Industries - Multi-industry Expertise | VX",
+  description:
+    "Industry solutions from VX Software Solutions: healthcare, fintech, education, logistics, and more.",
+  alternates: { canonical: "/industries" },
+  openGraph: {
+    title: "Industries — VX Software Solutions",
+    description:
+      "See how VX delivers across healthcare, fintech, education, and logistics.",
+    url: "https://www.vxsoftwaresolutions.com/industries",
+    images: [
+      { url: "/images/bannerimg.jpg", width: 1200, height: 630, alt: "VX Industries" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industries — VX Software Solutions",
+    description:
+      "See how VX delivers across healthcare, fintech, education, and logistics.",
+    images: ["/images/bannerimg.jpg"],
+  },
+};
+
 export default function Industries() {
   return (
     <div className="w-full min-h-screen bg-[#0C0C0C]">

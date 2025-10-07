@@ -4,6 +4,29 @@ import Contact from "../../components/Contact"
 import Testimonials from "../../components/Testimonials"
 import Footer from "../../components/footer1"
 
+export const metadata = {
+  title: "Contact Us - VX Software Solutions",
+  description:
+    "Get in touch with VX Software Solutions. Contact our team for software development, AI, and healthcare solutions.",
+  alternates: { canonical: "/contactus" },
+  openGraph: {
+    title: "Contact VX Software Solutions",
+    description:
+      "Reach our team for partnerships, projects, and support.",
+    url: "https://www.vxsoftwaresolutions.com/contactus",
+    images: [
+      { url: "/images/bannerimg.jpg", width: 1200, height: 630, alt: "Contact VX" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact VX Software Solutions",
+    description:
+      "Reach our team for partnerships, projects, and support.",
+    images: ["/images/bannerimg.jpg"],
+  },
+};
+
 export default function ContactUs(){
     return (
         <div>

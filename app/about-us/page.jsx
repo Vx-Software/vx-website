@@ -6,6 +6,29 @@ import Navbar from "../../components/Navbar";
 import Testimonials from "../../components/Testimonials";
 import Image from "next/image";
 
+export const metadata = {
+  title: "About Us - VX Software Solutions",
+  description:
+    "Learn about VX Software Solutions: mission, vision, leadership team, and the values guiding our software engineering and product development.",
+  alternates: { canonical: "/about-us" },
+  openGraph: {
+    title: "About VX Software Solutions",
+    description:
+      "Mission, vision, leadership, and values at VX Software Solutions.",
+    url: "https://www.vxsoftwaresolutions.com/about-us",
+    images: [
+      { url: "/images/bannerimg.jpg", width: 1200, height: 630, alt: "About VX" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About VX Software Solutions",
+    description:
+      "Mission, vision, leadership, and values at VX Software Solutions.",
+    images: ["/images/bannerimg.jpg"],
+  },
+};
+
 export default function AboutUs() {
   const about = [
     {

@@ -38,7 +38,7 @@ export const metadata = {
   authors: [{ name: "VX Software Solutions" }],
   creator: "VX Software Solutions",
   publisher: "VX Software Solutions",
-  metadataBase: new URL('https://vxsoftwaresolutions.com'),
+  metadataBase: new URL('https://www.vxsoftwaresolutions.com'),
   alternates: {
     canonical: '/',
   },
@@ -50,13 +50,13 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://vxsoftwaresolutions.com',
+    url: 'https://www.vxsoftwaresolutions.com',
     title: 'VX Software Solutions - Premier Software Development Company',
     description: 'Leading software development company specializing in AI solutions, healthcare software (V Healthcare), school management systems (V Remind), and digital transformation.',
     siteName: 'VX Software Solutions',
     images: [
       {
-        url: '/images/og-image.png',
+        url: '/images/bannerimg.jpg',
         width: 1200,
         height: 630,
         alt: 'VX Software Solutions - Premier Software Development Company',
@@ -67,7 +67,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'VX Software Solutions - Premier Software Development Company',
     description: 'Leading software development company specializing in AI solutions, healthcare software, school management systems, and digital transformation.',
-    images: ['/images/twitter-image.png'],
+    images: ['/images/bannerimg.jpg'],
   },
   robots: {
     index: true,
@@ -89,8 +89,8 @@ export const metadata = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "VX Software Solutions",
-    "url": "https://vxsoftwaresolutions.com",
-    "logo": "https://vxsoftwaresolutions.com/images/logo.png",
+    "url": "https://www.vxsoftwaresolutions.com",
+    "logo": "https://www.vxsoftwaresolutions.com/images/logo.png",
     "description": "Leading software development company specializing in AI solutions, healthcare software, school management systems, and digital transformation.",
     "foundingDate": "2020",
     "address": {
@@ -129,11 +129,28 @@ export const metadata = {
     ]
   }
 
+  const webSiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "VX Software Solutions",
+    "url": "https://www.vxsoftwaresolutions.com",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "VX Software Solutions",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.vxsoftwaresolutions.com/images/logo.png"
+      }
+    }
+  }
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
         <JsonLd data={jsonLd} />
+        <JsonLd data={webSiteJsonLd} />
         <meta name="google-site-verification" content="7d9afdb70696a250" />
       </head>
       <body className={`${archivo.variable} ${figtree.variable} antialiased`}>
