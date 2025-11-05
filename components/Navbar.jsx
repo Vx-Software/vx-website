@@ -2,9 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
+import ReactCookieBot from "react-cookiebot";
+
 
 export default function Navbar() {
+  const domainGroupId=process.env.DOMAINGROUPID || "b7ad67f7-c824-4b0b-9897-cded1912620a";
+
   const navItems = [
     { label: "Home", href: "/" },
     {
@@ -46,6 +50,11 @@ export default function Navbar() {
 
   return (
     <>
+      <ReactCookieBot
+        domainGroupId={domainGroupId}
+        onAccept={() => console.log("Cookies accepted")}
+        onDecline={() => console.log("Cookies declined")}
+      />    
       <div className="flex items-center justify-between w-full bg-[#1E1E1E] border-b-[1px] border-[#313131] px-4 sm:px-6 py-4 sm:py-5">
         <Link href="/" className="flex items-center gap-2">
           <Image
