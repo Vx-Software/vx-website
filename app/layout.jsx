@@ -43,9 +43,15 @@ export const metadata = {
     canonical: '/',
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/favicon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     type: 'website',
@@ -90,7 +96,12 @@ export const metadata = {
     "@type": "Organization",
     "name": "VX Software Solutions",
     "url": "https://www.vxsoftwaresolutions.com",
-    "logo": "https://www.vxsoftwaresolutions.com/images/logo.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.vxsoftwaresolutions.com/images/logo.png",
+      "width": 200,
+      "height": 200
+    },
     "description": "Leading software development company specializing in AI solutions, healthcare software, school management systems, and digital transformation.",
     "foundingDate": "2020",
     "address": {
@@ -149,6 +160,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
         <JsonLd data={jsonLd} />
         <JsonLd data={webSiteJsonLd} />
         <meta name="google-site-verification" content="7d9afdb70696a250" />
