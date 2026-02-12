@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdCall, MdEmail } from "react-icons/md";
 import Button from "./Button";
@@ -14,6 +15,7 @@ export default function Contact() {
     service: '',
     message: ''
   });
+  const [acceptTerms, setAcceptTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
@@ -42,6 +44,12 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    if (!acceptTerms) {
+      setSubmitStatus({ type: 'error', message: 'Please agree to the Terms & Conditions and Privacy Policy.' });
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       // Using FormData to be compatible with the updated API
       const formDataToSend = new FormData();
@@ -53,6 +61,7 @@ export default function Contact() {
       
       // Add organization field as optional (to match updated API)
       formDataToSend.append('organization', 'Not specified');
+      formDataToSend.append('acceptTerms', acceptTerms ? 'yes' : 'no');
 
       const response = await fetch('/api/send-email', {
         method: 'POST',
@@ -70,6 +79,7 @@ export default function Contact() {
           service: '',
           message: ''
         });
+        setAcceptTerms(false);
       } else {
         setSubmitStatus({ type: 'error', message: result.message || 'Failed to send message' });
       }
@@ -251,6 +261,28 @@ export default function Contact() {
                   className="flex-1 min-h-[100px] sm:min-h-[120px] xl:flex-1 bg-transparent border border-[#555] rounded-lg px-3 sm:px-4 py-2 sm:py-3 placeholder:font-figtree placeholder:text-[#777] text-white resize-none focus:outline-none focus:border-[#888] text-sm sm:text-base"
                 />
               </div>
+
+              {/* Consent Checkbox */}
+              <label className="flex items-start gap-2 text-white font-figtree text-sm sm:text-base">
+                <input
+                  type="checkbox"
+                  checked={acceptTerms}
+                  onChange={(e) => setAcceptTerms(e.target.checked)}
+                  className="mt-1 h-4 w-4 accent-[#1423C9] cursor-pointer"
+                  required
+                />
+                <span>
+                  I authorize notifications via SMS/messages/promotional/informational messages and agree to the{' '}
+                  <Link href="/terms-and-conditions" className="text-[#4C6BFF] hover:underline">
+                    Terms & Conditions
+                  </Link>{' '}
+                  and{' '}
+                  <Link href="/privacy-policy" className="text-[#4C6BFF] hover:underline">
+                    Privacy Policy
+                  </Link>
+                  .
+                </span>
+              </label>
 
               {/* Submit Button */}
               <div className="self-center sm:self-end mt-2 sm:mt-0">

@@ -94,6 +94,9 @@ export default function Footer() {
   <Link href="/privacy-policy" className="font-figtree font-semibold text-sm mb-2 mt-4 block hover:underline">
     Privacy policy
   </Link>
+  <Link href="/terms-and-conditions" className="font-figtree font-semibold text-sm block hover:underline">
+    Terms & Conditions
+  </Link>
 </div>
               
           </div>

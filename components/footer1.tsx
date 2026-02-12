@@ -54,6 +54,16 @@ export default function Footer1() {
                   Leadership
                 </Link>
               </li>
+              <li>
+                <Link href="/privacy-policy" className="text-sm text-light-400 hover:text-brand-blue transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-and-conditions" className="text-sm text-light-400 hover:text-brand-blue transition-colors">
+                  Terms & Conditions
+                </Link>
+              </li>
             </ul>
           </div>
         
