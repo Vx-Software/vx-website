@@ -105,7 +105,7 @@ export default function Footer() {
 
       <div className="overflow-hidden">
         <h2 className="font-figtree font-extrabold text-[4rem] md:text-[6rem] footertext-outline  text-center leading-none select-none">
-          VX SOFTWARE SOLUTIONS
+          VXSS PVT LTD
         </h2>
       </div>
 
